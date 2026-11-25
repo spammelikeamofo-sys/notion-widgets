@@ -3,10 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sylvi Weather</title>
+  <meta name="color-scheme" content="dark">
+  <title>Weather</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Verdana, sans-serif;
+      background: #191919;
+      color: #e3e3e3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 24px;
+      background: #191919;
+    }
+
+    main {
+      width: min(100%, 680px);
+      margin: 0 auto;
+    }
+
+    section + section {
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <a class="weatherwidget-io" href="https://forecast7.com/en/n36d92142d51/dadswells-bridge/" data-label_1="Sylvi" data-font="Verdana" data-days="3" data-theme="weather_one">Sylvi</a>
+  <main>
+    <section aria-label="Sylvi weather">
+      <a class="weatherwidget-io" href="https://forecast7.com/en/n36d92142d51/dadswells-bridge/" data-label_1="Sylvi" data-font="Verdana" data-days="3" data-theme="weather_one">Sylvi</a>
+    </section>
+    <section aria-label="Bini weather">
+      <a class="weatherwidget-io" href="https://forecast7.com/en/48d3710d90/augsburg/" data-label_1="Bini" data-font="Verdana" data-days="3" data-theme="weather_one">Bini</a>
+    </section>
+  </main>
   <script>
     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
   </script>
